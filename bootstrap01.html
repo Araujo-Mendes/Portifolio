@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portífolio - Gustavo Araújo</title>
+  <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+  
+  <header>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="#inicio">
+            Gustavo Araújo
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal"
+            aria-expanded="false"
+            aria-label="Abrir menu de navegação">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+            <div class="navbar-nav ms-auto">
+
+                <a class="nav-link active" href="#inicio">
+                    Início
+                </a>
+
+                <a class="nav-link" href="#projetos">
+                    Projetos
+                </a>
+
+                <a class="nav-link" href="#sobre">
+                    Sobre mim
+                </a>
+
+                <a class="nav-link" href="#contato">
+                    Contato
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+</nav>
+</nav>
+  </header>
+
+  
+  <main>
+
+    
+    <section id="inicio">
+      <h2>Jovem estudante</h2>
+      <h5>Estudante de desenvolvimento de sistemas, focado em criar soluções eficientes em JavaScript. Explore meus projetos abaixo!</h5>
+    </section>
+
+    <section id="projetos">
+      <h2>Meus projetos</h2>
+
+      
+        <article>
+          <div class="contains-inline">
+        
+          <div class="card card-translucent card-group">
+          <div class="card">
+          <h4 class="card-title">Arquitetura Corporativa MVC</h4>
+          <p class="card-text">Projeto desenvolvido em JavaScript como atividade proposta pelo professor e elaborado em grupo de 3 integrantes, com o objetivo de aplicar a arquitetura MVC (Model-View-Controller). O projeto permitiu praticar a organização do código, a separação de responsabilidades e o desenvolvimento colaborativo de software.</p>
+         <a
+          href="https://github.com/Araujo-Mendes/Corporativa-Arquitetura-MVC"
+          class="btn-project"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Ver projeto no GitHub ↗
+          </a>
+          </div>
+           <div class="card">
+          <h4 class="card-title">Biblioteca Municipal</h4>
+          <p class="card-text">Projeto desenvolvido em JavaScript e Node.js como atividade proposta pelo professor, com o objetivo de criar um sistema para uma Biblioteca Municipal, aplicando conceitos de programação orientada a objetos, cadastro de leitores, validação de dados e tratamento de erros.</p>
+           <a
+          href="https://github.com/Araujo-Mendes/Biblioteca-municipal"
+          class="btn-project"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Ver projeto no GitHub ↗
+          </a>
+          </div>
+           <div class="card">
+          <h4 class="card-title">Sistema de Gestão Acadêmica</h4>
+          <p class="card-text">Projeto desenvolvido em JavaScript como atividade prática proposta pelo professor, com o objetivo de criar um sistema de gestão acadêmica, aplicando conceitos de programação orientada a objetos, organização de classes, validação de dados e tratamento de exceções.</p>
+           <a
+          href="https://github.com/Araujo-Mendes/A-Constru-o-do-Sistema-de-Gest-o-Acad-mica"
+          class="btn-project"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Ver projeto no GitHub ↗
+          </a>
+          </div>
+        </div>
+        </div>
+       
+   <section id="sobre" class="container my-5 py-4">
+  <div class="row align-items-center">
+    <div class="col-md-4 text-center mb-4 mb-md-0">
+      
+      <img src="imagem2.jpeg" alt="Foto de Gustavo Araújo"  style="max-width: 250px;">
+    </div>
+    <div class="col-md-8">
+      <h2>Sobre mim</h2>
+      <p>
+        Olá! Sou o <strong>Gustavo Araújo</strong>, moro em Cubatão e sou estudante de desenvolvimento de sistemas. 
+        Atualmente, atuo como Jovem Aprendiz na Petrobras, complementando minha formação técnica no SENAI Antonio Souza Noschese, em Santos.
+      </p>
+      <p>
+        Tenho forte foco no desenvolvimento backend, explorando tecnologias como <strong>JavaScript e Node.js</strong>. 
+        Minha prática envolve a aplicação de Programação Orientada a Objetos (POO) e arquitetura MVC (Model-View-Controller) para construir sistemas organizados, escaláveis e eficientes.
+      </p>
+    </div>
+  </div>
+  <section id="contato" class="container my-5 py-4">
+      <h2 class="text-center mb-4">Contato</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <form>
+            <div class="mb-3">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="email" placeholder="seu@email.com" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="assunto" class="form-label">Assunto</label>
+              <input type="text" class="form-control" id="assunto" placeholder="Qual o motivo do contato?" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="mensagem" class="form-label">Mensagem</label>
+              <textarea class="form-control" id="mensagem" rows="5" placeholder="Descreva como posso te ajudar..." required></textarea>
+            </div>
+            
+            <div class="text-center">
+             
+              <button type="submit" class="btn btn-primary px-4 py-2">Enviar Mensagem</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+</section>
+
+  </main>
+
+  
+  <footer>
+    <p>&copy; 2026 | Gustavo Araújo Mendes</p>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        // Pega o ID da seção quando ela chega perto do topo da tela
+        if (scrollY >= sectionTop - 150) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      // Remove a classe 'active' de todos e adiciona só no que está na tela
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (current && link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

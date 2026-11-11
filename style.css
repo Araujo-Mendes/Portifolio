@@ -1,0 +1,432 @@
+
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+:root {
+    --fundo: #090909;
+    --fundo-secundario: #111111;
+    --fundo-card: #171717;
+    --borda: #2b2b2b;
+    --branco: #ffffff;
+    --cinza: #b3b3b3;
+    --cinza-escuro: #777777;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--branco);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+main {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+/* ==============================
+   BARRA DE NAVEGAÇÃO
+================================= */
+
+header {
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 75px;
+    padding: 12px 5%;
+    background-color: rgba(9, 9, 9, 0.92) !important;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--borda);
+}
+
+.navbar .container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-brand {
+    color: var(--branco) !important;
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.navbar-brand:hover {
+    color: var(--cinza) !important;
+}
+
+.navbar-nav {
+    gap: 8px;
+}
+
+.navbar .nav-link {
+    color: var(--cinza) !important;
+    font-size: 0.95rem;
+    padding: 9px 16px !important;
+    border-radius: 8px;
+    transition: 0.25s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--branco) !important;
+    background-color: #252525;
+}
+
+.navbar .nav-link.disabled {
+    color: #555 !important;
+}
+
+/* Botão do menu no celular */
+
+.navbar-toggler {
+    border: 1px solid #444 !important;
+    padding: 8px 10px;
+    box-shadow: none !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 2px #555 !important;
+}
+
+.navbar-toggler-icon {
+    filter: grayscale(1);
+}
+
+/* ==============================
+   TÍTULOS E SEÇÕES
+================================= */
+
+section {
+    margin-bottom: 90px;
+}
+
+section h2 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 800;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+h5 {
+    color: var(--cinza); /* Usa o cinza padrão do seu tema, fica bem mais elegante */
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 800px; /* Impede que o texto fique esticado de ponta a ponta na tela */
+    margin-top: 15px;
+}
+
+
+
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    background-color: var(--branco);
+    margin-top: 12px;
+    border-radius: 5px;
+}
+
+section p {
+    color: var(--cinza);
+    font-size: 1rem;
+}
+
+/* ==============================
+   PROJETOS
+================================= */
+
+.contains-inline {
+    width: 100%;
+}
+
+.card-group {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    background: transparent !important;
+}
+
+.card,
+.card-translucent {
+    min-width: 0;
+    background-color: var(--fundo-card) !important;
+    color: var(--branco) !important;
+    border: 1px solid var(--borda) !important;
+    border-radius: 16px !important;
+    overflow: hidden;
+}
+
+.card-group > .card {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card-group > .card:hover {
+    transform: translateY(-6px);
+    border-color: #666 !important;
+    background-color: #1d1d1d !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.card-title {
+    color: var(--branco) !important;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    color: var(--cinza) !important;
+    font-size: 0.94rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+/* Botões dos projetos */
+
+.btn-solid,
+.btn-subtle,
+.btn-project {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 11px 16px;
+    color: var(--fundo) !important;
+    background-color: var(--branco) !important;
+    border: 1px solid var(--branco) !important;
+    border-radius: 9px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: center;
+    transition: 0.25s ease;
+}
+
+.btn-solid:hover,
+.btn-subtle:hover,
+.btn-project:hover {
+    color: var(--branco) !important;
+    background-color: transparent !important;
+    border-color: #777 !important;
+}
+
+.btn-subtle {
+    background: transparent !important;
+    color: inherit !important;
+    border: none !important;
+    padding: 0;
+    font: inherit;
+}
+
+.btn-subtle:hover {
+    color: inherit !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+/* Evita estilos estranhos do Bootstrap nos botões */
+
+.card a {
+    margin-top: auto;
+}
+
+/* ==============================
+   PROJETOS ADICIONAIS
+================================= */
+
+article:not(:first-child) {
+    margin-top: 25px;
+}
+
+article > h3 {
+    color: var(--branco);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* ==============================
+   RODAPÉ
+================================= */
+
+footer {
+    border-top: 1px solid var(--borda);
+    background-color: var(--fundo-secundario);
+    padding: 25px 5%;
+    text-align: center;
+}
+
+footer p {
+    color: var(--cinza-escuro);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 991px) {
+    .card-group {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .navbar-collapse {
+        padding: 15px 0;
+    }
+
+    .navbar-nav {
+        gap: 5px;
+    }
+
+    .navbar .nav-link {
+        padding: 12px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 90%;
+        padding-top: 100px;
+    }
+
+    section {
+        margin-bottom: 60px;
+    }
+
+    .card-group {
+        grid-template-columns: 1fr;
+    }
+
+    .card-group > .card {
+        padding: 22px;
+    }
+
+    .navbar {
+        padding: 12px 5%;
+    }
+}
+.contact-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f8f9fa; /* Ajuste se o seu tema for escuro */
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15) !important;
+}
+#contato {
+    margin-bottom: 90px;
+}
+
+#contato .form-label {
+    color: var(--cinza);
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+#contato .form-control {
+    background-color: var(--fundo-card);
+    border: 1px solid var(--borda);
+    color: var(--branco);
+    border-radius: 10px;
+    padding: 12px 15px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Cor do texto de dica (placeholder) */
+#contato .form-control::placeholder {
+    color: var(--cinza-escuro);
+}
+
+/* Efeito ao clicar/focar no campo */
+#contato .form-control:focus {
+    background-color: var(--fundo-secundario);
+    color: var(--branco);
+    border-color: #555;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+    outline: none;
+}
+
+/* Removemos o estilo padrão do btn-primary do Bootstrap e aplicamos o seu estilo */
+#contato button[type="submit"] {
+    background-color: var(--branco) !important;
+    color: var(--fundo) !important;
+    border: 1px solid var(--branco) !important;
+    border-radius: 9px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    transition: 0.25s ease;
+    margin-top: 10px;
+    width: 100%; /* Deixa o botão largo no celular */
+    max-width: 250px; /* Mas limita o tamanho em telas grandes */
+}
+
+#contato button[type="submit"]:hover {
+    background-color: transparent !important;
+    color: var(--branco) !important;
+    border-color: #777 !important;
+}
+#contato h2::after {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 2. Cria um cartão à volta do formulário para o deixar mais elegante */
+#contato form {
+    background-color: var(--fundo-card);
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid var(--borda);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* 3. Escurece ligeiramente o fundo dos campos para ganharem destaque dentro do cartão */
+#contato .form-control {
+    background-color: var(--fundo) !important;
+}
+
+/* Espaçamento extra no telemóvel para não ficar colado às margens */
+@media (max-width: 600px) {
+    #contato form {
+        padding: 25px 20px;
+    }
+}
